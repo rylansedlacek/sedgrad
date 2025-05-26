@@ -10,6 +10,7 @@ class Neuron:
         
         self.bias = Value(0.0)
 
+
     def __call__(self, inputs):
         total = self.bias
 
@@ -19,6 +20,7 @@ class Neuron:
 
         output = total.tanh()
         return output
+
 
     def parameters(self):
         params = []

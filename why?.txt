@@ -1,0 +1,50 @@
+why sedgrad?
+
+
+This is a minial deep learning framework from scratch. It is a project designed to help
+developers understand how PyTorch, TensorFlow, etc. work under the hood. 
+
+
+Why this matters:
+- It's how all of machine learning works at its core!
+
+
+Structure:
+- There are three main parts:
+    - sed_engine.py -- implements backpropagation
+    - sed_nn.py -- build neurons, layers of those neurons, and a simple MLP
+    - sed_train.py -- trains the MLP on real datasets
+
+- sed_engine.py
+    - an autograd engine for scalar Values
+    - Value objects that contain a scalar number
+    - supports arithmetic operations: so far (+, *, and tanh())
+    - builds out a computation graph
+    - runs backpropagation to compute gradients
+
+- sed_nn.py 
+    - "the brain"
+    - Neutron: a neuron that takes inputs, weights, bias, and tanh
+    - Layer: group of neurons that run together in parrallel
+    - MLP: stacks of layers to create the actual neural net
+    - Gives the model strucutre, the engine just knows math, this builds the brain.
+
+- sed_train.py
+    - making the model learn
+
+    - TBD
+
+    - Maybe...
+        - binary classification
+        - simple regression
+        - logic gates (XOR)
+
+
+Future Plans:
+- add Cross Entropy Loss	
+- add mini-batches	
+- add Adam optimizer	
+- add tensor support
+
+
+
