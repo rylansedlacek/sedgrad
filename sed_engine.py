@@ -1,13 +1,14 @@
 import math
 
 class Value:
+    # node
     def __init__(self, data, _children=(), _op=''):
-        self.data = data # scalar value
-        self.grad = 0.0 # gradient of the value
+        self.data = data 
+        self.grad = 0.0 
 
-        self._backward = lambda: None # backpropagation function
-        self._prev = set(_children) #input vals to compute 
-        self._op = _op # debug
+        self._backward = lambda: None 
+        self._prev = set(_children) 
+        self._op = _op 
 
 
     def __repr__(self):
@@ -15,10 +16,8 @@ class Value:
     
 
     def __add__(self, other):
-        if isinstance(other, Value):
-            other = other
-        else:
-            Value(other) # convert to Value if not already
+        if not isinstance(other, Value):
+            other = Value(other)  # convert to Value if not already
 
         out = Value(self.data + other.data, (self, other), '+')
 
@@ -30,10 +29,8 @@ class Value:
         return out
     
     def __mul__(self, other):
-        if isinstance(other, Value):
-            other = other
-        else:
-            Value(other) # convert to Value if not already
+        if not isinstance(other, Value):
+            other = Value(other)  # convert to Value if not already
 
         out = Value(self.data * other.data, (self, other), '*')
 
@@ -57,6 +54,7 @@ class Value:
 
         return out
   
+    # backpropagation
     def backward(self):
         topo = []
         visited = set()
