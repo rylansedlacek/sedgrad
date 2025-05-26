@@ -1,4 +1,4 @@
-from sed_engine import Value
+from sedgrad.sed_engine import Value
 import random
 
 class Neuron:
