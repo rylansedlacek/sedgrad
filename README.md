@@ -1,5 +1,7 @@
 <h1><u>sedgrad</u></h1>
 
+<h3>the why behind <a href="https://raw.githubusercontent.com/rylansedlacek/sedgrad/refs/heads/main/why%3F.txt">sedgrad</a>.</h3>
+
 <h2>About:</h2>
 
 - Created May 2025.
