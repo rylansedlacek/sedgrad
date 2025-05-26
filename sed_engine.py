@@ -28,6 +28,7 @@ class Value:
         out._backward = _backward
         return out
     
+
     def __mul__(self, other):
         if not isinstance(other, Value):
             other = Value(other)  # convert to Value if not already
@@ -41,6 +42,7 @@ class Value:
         out._backward = _backward
         return out
     
+
     # activation
     def tanh(self):
         x = self.data
@@ -53,6 +55,7 @@ class Value:
         out._backward = _backward
 
         return out
+  
   
     # backpropagation
     def backward(self):
