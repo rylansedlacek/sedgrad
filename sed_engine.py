@@ -71,20 +71,4 @@ class Value:
 
         for node in reversed(topo):
             node._backward()
-
-
-x = Value(2.0)   # input
-w = Value(-3.0)  # weight
-b = Value(1.0)   # bias
-
-y = w * x + b    # weighted sum
-o = y.tanh()     # activation
-
-o.backward()     # compute gradients
-
-print("Output:", o)
-print("Gradients:")
-print("  x.grad =", x.grad)
-print("  w.grad =", w.grad)
-print("  b.grad =", b.grad)
   
