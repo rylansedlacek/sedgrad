@@ -73,7 +73,7 @@ class MLP:
     def parameters(self):
         params = [] #  collect all parameters from all layers
         for layer in self.layers:
-            layer_params = layer.paramters()
+            layer_params = layer.parameters()
             for p in layer_params:
                 params.append(p)
         return params

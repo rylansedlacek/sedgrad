@@ -42,7 +42,12 @@ class Value:
         out._backward = _backward
         return out
     
+    def __neg__(self):  # allows -a for Value a
+        return self * -1
 
+    def __sub__(self, other):  # allows a - b
+        return self + (-other)
+    
     # activation
     def tanh(self):
         x = self.data
