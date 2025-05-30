@@ -6,7 +6,7 @@
 
 - Created May 2025.
 - Coded in Python.
-- Based off of: https://github.com/karpathy/micrograd/tree/master
+- inspired by: https://github.com/karpathy/micrograd/tree/master
 
 <h2>Features:</h2>
 
