@@ -10,11 +10,9 @@ class Value:
         self._prev = set(_children) 
         self._op = _op 
 
-
     def __repr__(self):
         return f"Value (data={self.data}, grad={self.grad})" 
     
-
     def __add__(self, other):
         if not isinstance(other, Value):
             other = Value(other)  # convert to Value if not already
@@ -28,7 +26,9 @@ class Value:
         out._backward = _backward
         return out
     
-
+    def __hash__(self): # a hashing addition to be safe
+        return id(self)
+    
     def __mul__(self, other):
         if not isinstance(other, Value):
             other = Value(other)  # convert to Value if not already
@@ -60,7 +60,6 @@ class Value:
         out._backward = _backward
 
         return out
-  
   
     # backpropagation
     def backward(self):
