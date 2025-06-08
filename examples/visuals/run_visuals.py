@@ -4,7 +4,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from sedgrad.sed_engine import Value
 from sedgrad.sed_nn import MLP
-from visualizer import draw_dot, visualize_network
+from examples.visuals.visualizer import draw_dot, visualize_network
 
 a = Value(1.5)
 b = Value(-2.0)

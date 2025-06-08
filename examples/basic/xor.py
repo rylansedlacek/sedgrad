@@ -4,7 +4,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from sedgrad.sed_nn import Neuron, Layer, MLP
 from sedgrad.sed_engine import Value
-from examples.visualizer import draw_dot, visualize_network
+from examples.visuals.visualizer import draw_dot, visualize_network
 
 data = [
     ([0.0, 0.0], 0.0), # XOR = input1, input2, target value
