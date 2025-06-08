@@ -10,5 +10,11 @@
 
 <h2>Features:</h2>
 
+- Implements: Scalar-based reverse-mode autodiff
+- A simple neural network (MLP) from scratch
+- Optimizers: SGD, Adam (in progress)
+- Visualization: Graph of computations
+- No dependencies: Pure Python + math
+
 -----------------------------------------------------
 <h2>Version 1.0 Summer 2025</h2>
